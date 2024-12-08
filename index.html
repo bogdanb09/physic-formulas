@@ -1,19 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics Formulas</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        h1 { font-size: 2rem; }
-        input[type="text"] { padding: 8px; width: 100%; margin-bottom: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Formulas</title>
+  <style>
+    /* Styling for the top right section */
+    #top-right {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #credits {
+      font-size: 14px;
+      color: #000;
+    }
+
+    #buy-kebab-button {
+      padding: 10px 20px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #buy-kebab-button:hover {
+      background-color: #e5533b;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Top-right section with Buy Me A Kebab button and credits -->
+  <div id="top-right">
+    <button id="buy-kebab-button" onclick="window.location.href='https://www.paypal.com'">Buy Me A Kebab</button>
+    <div id="credits">Made by Barbalat Bogdan</div>
+  </div>
+
+  <h1>Physics Formulas</h1>
+  <!-- Speed Calculator -->
+  <div class="calculator">
+    <h3>Speed Calculator</h3>
+    <div class="input-group">
+      <label for="distance">Distance (m):</label>
+      <input type="number" id="distance" placeholder="Enter distance">
+    </div>
+    <div class="input-group">
+      <label for="time">Time (s):</label>
+      <input type="number" id="time" placeholder="Enter time">
+    </div>
+    <button onclick="calculateSpeed()">Calculate Speed</button>
+    <div class="result" id="speedResult"></div>
+  </div>
+
+  <!-- Acceleration Calculator -->
+  <div class="calculator">
+    <h3>Acceleration Calculator</h3>
+    <div class="input-group">
+      <label for="initialVelocity">Initial Velocity (m/s):</label>
+      <input type="number" id="initialVelocity" placeholder="Enter initial velocity">
+    </div>
+    <div class="input-group">
+      <label for="finalVelocity">Final Velocity (m/s):</label>
+      <input type="number" id="finalVelocity" placeholder="Enter final velocity">
+    </div>
+    <div class="input-group">
+      <label for="timeForAcceleration">Time (s):</label>
+      <input type="number" id="timeForAcceleration" placeholder="Enter time">
+    </div>
+    <button onclick="calculateAcceleration()">Calculate Acceleration</button>
+    <div class="result" id="accelerationResult"></div>
+  </div>
+
+  <!-- Force Calculator -->
+  <div class="calculator">
+    <h3>Force Calculator</h3>
+    <div class="input-group">
+      <label for="mass">Mass (kg):</label>
+      <input type="number" id="mass" placeholder="Enter mass">
+    </div>
+    <div class="input-group">
+      <label for="accelerationForce">Acceleration (m/s²):</label>
+      <input type="number" id="accelerationForce" placeholder="Enter acceleration">
+    </div>
+    <button onclick="calculateForce()">Calculate Force</button>
+    <div class="result" id="forceResult"></div>
+  </div>
+
+  <!-- Work Calculator -->
+  <div class="calculator">
+    <h3>Work Calculator</h3>
+    <div class="input-group">
+      <label for="forceWork">Force (N):</label>
+      <input type="number" id="forceWork" placeholder="Enter force">
+    </div>
+    <div class="input-group">
+      <label for="distanceWork">Distance (m):</label>
+      <input type="number" id="distanceWork" placeholder="Enter distance">
+    </div>
+    <div class="input-group">
+      <label for="angleWork">Angle (degrees):</label>
+      <input type="number" id="angleWork" placeholder="Enter angle">
+    </div>
+    <button onclick="calculateWork()">Calculate Work</button>
+    <div class="result" id="workResult"></div>
+  </div>
+
+  <!-- Kinetic Energy Calculator -->
+  <div class="calculator">
+    <h3>Kinetic Energy Calculator</h3>
+    <div class="input-group">
+      <label for="massKE">Mass (kg):</label>
+      <input type="number" id="massKE" placeholder="Enter mass">
+    </div>
+    <div class="input-group">
+      <label for="velocityKE">Velocity (m/s):</label>
+      <input type="number" id="velocityKE" placeholder="Enter velocity">
+    </div>
+    <button onclick="calculateKineticEnergy()">Calculate Kinetic Energy</button>
+    <div class="result" id="kineticEnergyResult"></div>
+  </div>
+
+  <!-- Potential Energy Calculator -->
+  <div class="calculator">
+    <h3>Potential Energy Calculator</h3>
+    <div class="input-group">
+      <label for="massPE">Mass (kg):</label>
+      <input type="number" id="massPE" placeholder="Enter mass">
+    </div>
+    <div class="input-group">
+      <label for="heightPE">Height (m):</label>
+      <input type="number" id="heightPE" placeholder="Enter height">
+    </div>
+    <div class="input-group">
+      <label for="gravityPE">Gravity (m/s²):</label>
+      <input type="number" id="gravityPE" value="9.81" readonly>
+    </div>
+    <button onclick="calculatePotentialEnergy()">Calculate Potential Energy</button>
+    <div class="result" id="potentialEnergyResult"></div>
+  </div>
+
+  <script>
+    function calculateSpeed() {
+      const distance = parseFloat(document.getElementById("distance").value);
+      const time = parseFloat(document.getElementById("time").value);
+      if (!isNaN(distance) && !isNaN(time) && time > 0) {
+        const speed = distance / time;
+        document.getElementById("speedResult").innerText = "Speed = " + speed.toFixed(2) + " m/s";
+      } else {
+        alert("Please enter valid values for distance and time.");
+      }
+    }
+
+    function calculateAcceleration() {
+      const initialVelocity = parseFloat(document.getElementById("initialVelocity").value);
+      const finalVelocity = parseFloat(document.getElementById("finalVelocity").value);
+      const time = parseFloat(document.getElementById("timeForAcceleration").value);
+      if (!isNaN(initialVelocity) && !isNaN(finalVelocity) && !isNaN(time) && time > 0) {
+        const acceleration = (finalVelocity - initialVelocity) / time;
+        document.getElementById("accelerationResult").innerText = "Acceleration = " + acceleration.toFixed(2) + " m/s²";
+      } else {
+        alert("Please enter valid values for velocities and time.");
+      }
+    }
+
+    function calculateForce() {
+      const mass = parseFloat(document.getElementById("mass").value);
+      const acceleration = parseFloat(document.getElementById("accelerationForce").value);
+      if (!isNaN(mass) && !isNaN(acceleration)) {
+        const force = mass * acceleration;
+        document.getElementById("forceResult").innerText = "Force = " + force.toFixed(2) + " N";
+      } else {
+        alert("Please enter valid values for mass and acceleration.");
+      }
+    }
+
+    function calculateWork() {
+      const force = parseFloat(document.getElementById("forceWork").value);
+      const distance = parseFloat(document.getElementById("distanceWork").value);
+      const angle = parseFloat(document.getElementById("angleWork").value) * (Math.PI / 180); // Convert to radians
+      if (!isNaN(force) && !isNaN(distance) && !isNaN(angle)) {
+        const work = force * distance * Math.cos(angle);
+        document.getElementById("workResult").innerText = "Work = " + work.toFixed(2) + " J";
+      } else {
+        alert("Please enter valid values for force, distance, and angle.");
+      }
+    }
+
+    function calculateKineticEnergy() {
+      const mass = parseFloat(document.getElementById("massKE").value);
+      const velocity = parseFloat(document.getElementById("velocityKE").value);
+      if (!isNaN(mass) && !isNaN(velocity)) {
+        const kineticEnergy = 0.5 * mass * Math.pow(velocity, 2);
+        document.getElementById("kineticEnergyResult").innerText = "Kinetic Energy = " + kineticEnergy.toFixed(2) + " J";
+      } else {
+        alert("Please enter valid values for mass and velocity.");
+      }
+    }
+
+    function calculatePotentialEnergy() {
+      const mass = parseFloat(document.getElementById("massPE").value);
+      const height = parseFloat(document.getElementById("heightPE").value);
+      const gravity = parseFloat(document.getElementById("gravityPE").value);
+      if (!isNaN(mass) && !isNaN(height) && !isNaN(gravity)) {
+        const potentialEnergy = mass * gravity * height;
+        document.getElementById("potentialEnergyResult").innerText = "Potential Energy = " + potentialEnergy.toFixed(2) + " J";
+      } else {
+        alert("Please enter valid values for mass, height, and gravity.");
+      }
+    }
+  </script>
+</body>
+</html>    
+    </a>
+  </div>
     <h1>Physics Formulas</h1>
     <input type="text" id="search" placeholder="Search formulas..." onkeyup="searchTable()">
     <table id="formulaTable">
@@ -259,6 +464,73 @@
                 <td>m</td>
                 <td>C = [(x₁ + x₂ + x₃) / 3, (y₁ + y₂ + y₃) / 3]</td>
             </tr>
+            <tr>
+  <td>Final Velocity</td>
+  <td>v⃗ f = v⃗ i + a⃗ Δt</td>
+  <td>m/s</td>
+  <td>v⃗ f = v⃗ i + a⃗ Δt</td>
+</tr>
+<tr>
+  <td>Kinematics (Final Velocity Squared)</td>
+  <td>v⃗ f² = v⃗ i² + 2a⃗ ⋅ Δx⃗</td>
+  <td>m²/s²</td>
+  <td>v⃗ f² = v⃗ i² + 2a⃗ ⋅ Δx⃗</td>
+</tr>
+<tr>
+  <td>Kinematics (Displacement)</td>
+  <td>Δx⃗ = v⃗ iΔt + ½a⃗ (Δt)²</td>
+  <td>m</td>
+  <td>Δx⃗ = v⃗ iΔt + ½a⃗ (Δt)²</td>
+</tr>
+<tr>
+  <td>Kinetic Friction Force</td>
+  <td>fₖ = μₖN</td>
+  <td>N</td>
+  <td>fₖ = μₖN</td>
+</tr>
+<tr>
+  <td>Maximum Static Friction Force</td>
+  <td>fₛ(max) = μₛN</td>
+  <td>N</td>
+  <td>fₛ(max) = μₛN</td>
+</tr>
+<tr>
+  <td>Mechanical Energy</td>
+  <td>Emech = Ek + Ep</td>
+  <td>J</td>
+  <td>Emech = Ek + Ep</td>
+</tr>
+<tr>
+  <td>Photon Energy</td>
+  <td>E = hf</td>
+  <td>J</td>
+  <td>E = hf</td>
+</tr>
+<tr>
+  <td>Electromagnetic Flux</td>
+  <td>ϕ = BAcosθ</td>
+  <td>Wb</td>
+  <td>ϕ = BAcosθ</td>
+</tr>
+<tr>
+  <td>Electrostatic Force</td>
+  <td>F = k(Q₁Q₂/r²)</td>
+  <td>N</td>
+  <td>F = k(Q₁Q₂/r²)</td>
+</tr>
+<tr>
+  <td>AC RMS Current</td>
+  <td>I(rms) = I(max) / √2</td>
+  <td>A</td>
+  <td>I(rms) = I(max) / √2</td>
+</tr>
+<tr>
+  <td>AC RMS Voltage</td>
+  <td>V(rms) = V(max) / √2</td>
+  <td>V</td>
+  <td>V(rms) = V(max) / √2</td>
+</tr>
+
 
             <!-- Constants -->
             <tr>
@@ -398,4 +670,3 @@
     </script>
 </body>
 </html>
-
