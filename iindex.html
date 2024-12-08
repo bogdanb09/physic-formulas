@@ -5,717 +5,241 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Physics Formulas</title>
   <style>
-    /* Styling for the top-right section */
-    #top-right {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
     }
-
-    #credits {
-      font-size: 14px;
-      color: #000;
-    }
-
-    #buy-kebab-button {
-      padding: 10px 20px;
-      background-color: #ff6347;
+    header {
+      background-color: #333;
       color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
     }
-
-    #buy-kebab-button:hover {
-      background-color: #e5533b;
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #333;
+      color: white;
     }
-
-    /* Table Styling */
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .container {
+      margin: 20px;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 30px;
+      margin-top: 20px;
     }
-
     th, td {
-      padding: 15px;
-      text-align: left;
+      padding: 10px;
       border: 1px solid #ddd;
+      text-align: center;
     }
-
     th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td {
       background-color: #f2f2f2;
-      font-weight: bold;
     }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    tr:hover {
-      background-color: #e0e0e0;
-    }
-
-    /* Styling for the calculator */
-    .calculator {
-      margin-top: 30px;
+    .form-container {
+      background-color: #fff;
       padding: 20px;
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
     .calculator input {
-      padding: 8px;
       margin: 5px;
-      width: 100px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: 8px;
+      width: 150px;
     }
-
     .calculator button {
       padding: 10px 15px;
       background-color: #4CAF50;
       color: white;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
+      font-size: 16px;
     }
-
     .calculator button:hover {
       background-color: #45a049;
+    }
+    .result {
+      margin-top: 10px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Physics Formulas</h1>
+  </header>
 
-  <!-- Top-right section with Buy Me A Kebab button and credits -->
-  <div id="top-right">
-    <button id="buy-kebab-button" onclick="window.location.href='https://kebabun.md/'">Buy Me A Kebab</button>
-    <div id="credits">Made by Barbalat Bogdan</div>
+  <div class="top-bar">
+    <div>Made by Barbalat Bogdan</div>
+    <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">Buy Me A Kebab</a>
   </div>
 
-  <h1>Physics Formulas</h1>
+  <div class="container">
+    <h2>Formula Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Unit</th>
+          <th>Formula</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Speed</td>
+          <td>S</td>
+          <td>m/s</td>
+          <td>S = d / t</td>
+        </tr>
+        <tr>
+          <td>Acceleration</td>
+          <td>a</td>
+          <td>m/s²</td>
+          <td>a = (v - u) / t</td>
+        </tr>
+        <tr>
+          <td>Density</td>
+          <td>ρ</td>
+          <td>kg/m³</td>
+          <td>ρ = m / V</td>
+        </tr>
+        <tr>
+          <td>Power</td>
+          <td>P</td>
+          <td>W</td>
+          <td>P = W / t</td>
+        </tr>
+        <tr>
+          <td>Newton's Second Law</td>
+          <td>F</td>
+          <td>N</td>
+          <td>F = m × a</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>W</td>
+          <td>N</td>
+          <td>W = m × g</td>
+        </tr>
+        <tr>
+          <td>Pressure</td>
+          <td>P</td>
+          <td>Pa</td>
+          <td>P = F / A</td>
+        </tr>
+        <tr>
+          <td>Ohm’s Law</td>
+          <td>V</td>
+          <td>V</td>
+          <td>V = I × R</td>
+        </tr>
+        <tr>
+          <td>Kinetic Energy</td>
+          <td>KE</td>
+          <td>J</td>
+          <td>KE = 1/2 m × v²</td>
+        </tr>
+        <tr>
+          <td>Frequency</td>
+          <td>f</td>
+          <td>Hz</td>
+          <td>f = v / λ</td>
+        </tr>
+        <tr>
+          <td>Pendulum Period</td>
+          <td>T</td>
+          <td>s</td>
+          <td>T = 2π√(L / g)</td>
+        </tr>
+        <tr>
+          <td>Fahrenheit</td>
+          <td>F</td>
+          <td>°F</td>
+          <td>F = (9/5 × °C) + 32</td>
+        </tr>
+        <!-- Add more formulas here as needed -->
+      </tbody>
+    </table>
+  </div>
 
-  <!-- Physics Formulas Table -->
-  <table>
-    <thead>
-      <tr>
-        <th>Formula Name</th>
-        <th>Formula</th>
-        <th>Unit</th>
-        <th>Symbol</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Speed Formula</td>
-        <td>S = d / t</td>
-        <td>m/s</td>
-        <td>S</td>
-      </tr>
-      <tr>
-        <td>Acceleration Formula</td>
-        <td>a = (v - u) / t</td>
-        <td>m/s²</td>
-        <td>a</td>
-      </tr>
-      <tr>
-        <td>Density Formula</td>
-        <td>P = m / V</td>
-        <td>kg/m³</td>
-        <td>P</td>
-      </tr>
-      <tr>
-        <td>Power Formula</td>
-        <td>P = W / t</td>
-        <td>W</td>
-        <td>P</td>
-      </tr>
-      <tr>
-        <td>Newton’s Second Law</td>
-        <td>F = m × a</td>
-        <td>N</td>
-        <td>F</td>
-      </tr>
-      <tr>
-        <td>Weight Formula</td>
-        <td>W = m × g</td>
-        <td>N</td>
-        <td>W</td>
-      </tr>
-      <tr>
-        <td>Pressure Formula</td>
-        <td>P = F / A</td>
-        <td>Pa</td>
-        <td>P</td>
-      </tr>
-      <tr>
-        <td>Ohm’s Law Formula</td>
-        <td>V = I × R</td>
-        <td>V</td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td>Kinetic Energy Formula</td>
-        <td>E = ½ m v²</td>
-        <td>J</td>
-        <td>E</td>
-      </tr>
-      <tr>
-        <td>Frequency Formula</td>
-        <td>f = v / λ</td>
-        <td>Hz</td>
-        <td>f</td>
-      </tr>
-      <tr>
-        <td>Pendulum Formula</td>
-        <td>T = 2π √(L / g)</td>
-        <td>s</td>
-        <td>T</td>
-      </tr>
-      <tr>
-        <td>Fahrenheit Formula</td>
-        <td>F = (9/5) × °C + 32</td>
-        <td>°F</td>
-        <td>F</td>
-      </tr>
-      <tr>
-        <td>Work Formula</td>
-        <td>W = F × d × cos(θ)</td>
-        <td>J</td>
-        <td>W</td>
-      </tr>
-      <tr>
-        <td>Torque Formula</td>
-        <td>T = F × r × sin(θ)</td>
-        <td>N·m</td>
-        <td>T</td>
-      </tr>
-      <tr>
-        <td>Displacement Formula</td>
-        <td>ΔX = Xf - Xi</td>
-        <td>m</td>
-        <td>ΔX</td>
-      </tr>
-      <tr>
-        <td>Mass Formula</td>
-        <td>F = m × a or m = F / a</td>
-        <td>kg</td>
-        <td>m</td>
-      </tr>
-      <tr>
-        <td>Amplitude Formula</td>
-        <td>x = A sin(ωt + ϕ)</td>
-        <td>m</td>
-        <td>x</td>
-      </tr>
-      <tr>
-        <td>Tension Formula</td>
-        <td>T = mg + ma</td>
-        <td>N</td>
-        <td>T</td>
-      </tr>
-      <tr>
-        <td>Surface Charge Density Formula</td>
-        <td>σ = q / A</td>
-        <td>C/m²</td>
-        <td>σ</td>
-      </tr>
-      <tr>
-        <td>Linear Speed Formula</td>
-        <td>V = ΔS / ΔT</td>
-        <td>m/s</td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td>Position Formula</td>
-        <td>Δx = x₂ - x₁</td>
-        <td>m</td>
-        <td>Δx</td>
-      </tr>
-      <tr>
-        <td>Heat of Fusion Formula</td>
-        <td>q = m × ΔH<sub>f</sub></td>
-        <td>J</td>
-        <td>q</td>
-      </tr>
-      <tr>
-        <td>Gravity Formula</td>
-        <td>F α m₁m₂ / r²</td>
-        <td>N</td>
-        <td>F</td>
-      </tr>
-      <tr>
-        <td>Spring Potential Energy Formula</td>
-        <td>PE = 1/2 k x²</td>
-        <td>J</td>
-        <td>PE</td>
-      </tr>
-      <tr>
-        <td>Physics Kinematics Formula</td>
-        <td>v² = v₀² + 2a(x - x₀)</td>
-        <td>m/s</td>
-        <td>v</td>
-      </tr>
-      <tr>
-        <td>DC Voltage Drop Formula</td>
-        <td>V = I × R</td>
-        <td>V</td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td>Hubble’s Law Formula</td>
-        <td>v = H₀ × r</td>
-        <td>km/s</td>
-        <td>v</td>
-      </tr>
-    </tbody>
-  </table>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physics Formulas</title>
-  <style>
-    /* Styling for the table */
-     table {
-      width: 100%;
-      border-collapse: collapse; /* Ensures borders are collapsed together */
-      margin-top: 20px;
-    }
+  <div class="container">
+    <h2>Calculator</h2>
+    <div class="form-container">
+      <div class="calculator">
+        <h3>Speed Calculator</h3>
+        <label for="distance">Distance (m):</label>
+        <input type="number" id="distance" placeholder="Distance (m)">
+        <label for="time">Time (s):</label>
+        <input type="number" id="time" placeholder="Time (s)">
+        <button onclick="calculateSpeed()">Calculate Speed</button>
+        <div class="result">Speed: <span id="speed-result">0</span> m/s</div>
+      </div>
 
-    th, td {
-      border: 1px solid #ddd; /* Light border for each cell */
-      padding: 8px;
-      text-align: left;
-    }
+      <div class="calculator">
+        <h3>Acceleration Calculator</h3>
+        <label for="initial-speed">Initial Speed (m/s):</label>
+        <input type="number" id="initial-speed" placeholder="Initial Speed (m/s)">
+        <label for="final-speed">Final Speed (m/s):</label>
+        <input type="number" id="final-speed" placeholder="Final Speed (m/s)">
+        <label for="acceleration-time">Time (s):</label>
+        <input type="number" id="acceleration-time" placeholder="Time (s)">
+        <button onclick="calculateAcceleration()">Calculate Acceleration</button>
+        <div class="result">Acceleration: <span id="acceleration-result">0</span> m/s²</div>
+      </div>
 
-    th {
-      background-color: #f2f2f2; /* Light gray background for table headers */
-    }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9; /* Alternating row colors */
-    }
-
-    tr:hover {
-      background-color: #f1f1f1; /* Highlight row on hover */
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Physics Formulas</h1>
-
-  <!-- Physics Formulas Table -->
-  <table>
-    <thead>
-      <tr>
-        <th>Formula Name</th>
-        <th>Formula</th>
-        <th>Unit</th>
-        <th>Symbol</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Speed Formula</td>
-        <td>S = d / t</td>
-        <td>m/s</td>
-        <td>S</td>
-      </tr>
-      <tr>
-        <td>Acceleration Formula</td>
-        <td>a = (v - u) / t</td>
-        <td>m/s²</td>
-        <td>a</td>
-      </tr>
-      <tr>
-        <td>Density Formula</td>
-        <td>P = m / V</td>
-        <td>kg/m³</td>
-        <td>P</td>
-      </tr>
-      <tr>
-        <td>Power Formula</td>
-        <td>P = W / t</td>
-        <td>W</td>
-        <td>P</td>
-      </tr>
-      <tr>
-        <td>Newton’s Second Law</td>
-        <td>F = m × a</td>
-        <td>N</td>
-        <td>F</td>
-      </tr>
-      <tr>
-        <td>Weight Formula</td>
-        <td>W = m × g</td>
-        <td>N</td>
-        <td>W</td>
-      </tr>
-      <tr>
-        <td>Pressure Formula</td>
-        <td>P = F / A</td>
-        <td>Pa</td>
-        <td>P</td>
-      </tr>
-      <tr>
-        <td>Ohm’s Law Formula</td>
-        <td>V = I × R</td>
-        <td>V</td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td>Kinetic Energy Formula</td>
-        <td>E = ½ m v²</td>
-        <td>J</td>
-        <td>E</td>
-      </tr>
-      <tr>
-        <td>Frequency Formula</td>
-        <td>f = v / λ</td>
-        <td>Hz</td>
-        <td>f</td>
-      </tr>
-      <tr>
-        <td>Pendulum Formula</td>
-        <td>T = 2π √(L / g)</td>
-        <td>s</td>
-        <td>T</td>
-      </tr>
-      <tr>
-        <td>Fahrenheit Formula</td>
-        <td>F = (9/5) × °C + 32</td>
-        <td>°F</td>
-        <td>F</td>
-      </tr>
-      <tr>
-        <td>Work Formula</td>
-        <td>W = F × d × cos(θ)</td>
-        <td>J</td>
-        <td>W</td>
-      </tr>
-      <tr>
-        <td>Torque Formula</td>
-        <td>T = F × r × sin(θ)</td>
-        <td>N·m</td>
-        <td>T</td>
-      </tr>
-      <tr>
-        <td>Displacement Formula</td>
-        <td>ΔX = Xf - Xi</td>
-        <td>m</td>
-        <td>ΔX</td>
-      </tr>
-      <tr>
-        <td>Mass Formula</td>
-        <td>F = m × a or m = F / a</td>
-        <td>kg</td>
-        <td>m</td>
-      </tr>
-      <tr>
-        <td>Amplitude Formula</td>
-        <td>x = A sin(ωt + ϕ)</td>
-        <td>m</td>
-        <td>x</td>
-      </tr>
-      <tr>
-        <td>Tension Formula</td>
-        <td>T = mg + ma</td>
-        <td>N</td>
-        <td>T</td>
-      </tr>
-      <tr>
-        <td>Surface Charge Density Formula</td>
-        <td>σ = q / A</td>
-        <td>C/m²</td>
-        <td>σ</td>
-      </tr>
-      <tr>
-        <td>Linear Speed Formula</td>
-        <td>V = ΔS / ΔT</td>
-        <td>m/s</td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td>Position Formula</td>
-        <td>Δx = x₂ - x₁</td>
-        <td>m</td>
-        <td>Δx</td>
-      </tr>
-      <tr>
-        <td>Heat of Fusion Formula</td>
-        <td>q = m × ΔH<sub>f</sub></td>
-        <td>J</td>
-        <td>q</td>
-      </tr>
-      <tr>
-        <td>Gravity Formula</td>
-        <td>F α m₁m₂ / r²</td>
-        <td>N</td>
-        <td>F</td>
-      </tr>
-      <tr>
-        <td>Spring Potential Energy Formula</td>
-        <td>PE = 1/2 k x²</td>
-        <td>J</td>
-        <td>PE</td>
-      </tr>
-      <tr>
-        <td>Physics Kinematics Formula</td>
-        <td>v² = v₀² + 2a(x - x₀)</td>
-        <td>m/s</td>
-        <td>v</td>
-      </tr>
-      <tr>
-        <td>DC Voltage Drop Formula</td>
-        <td>V = I × R</td>
-        <td>V</td>
-        <td>V</td>
-      </tr>
-      <tr>
-        <td>Hubble’s Law Formula</td>
-        <td>v = H₀ × r</td>
-        <td>km/s</td>
-        <td>v</td>
-      </tr>
-    </tbody>
-  </table>
-
-    <title>Physics Formula Calculator</title>
-  <style>
-    .calculator {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .calculator input {
-      padding: 8px;
-      margin: 5px;
-      width: 100px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .calculator button {
-      padding: 10px 15px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .calculator button:hover {
-      background-color: #45a049;
-    }
-
-    .calculator h2 {
-      font-size: 1.5em;
-    }
-
-    .calculator h3 {
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="calculator">
-    <h2>Physics Formula Calculator</h2>
-
-    <!-- Speed Calculator -->
-    <h3>Calculate Speed (S = d / t)</h3>
-    <form id="speed-form">
-      <label for="distance">Distance (m):</label>
-      <input type="number" id="distance" name="distance">
-      <br>
-      <label for="time">Time (s):</label>
-      <input type="number" id="time" name="time">
-      <br>
-      <button type="button" onclick="calculateSpeed()">Calculate Speed (m/s)</button>
-    </form>
-    <h3>Result: <span id="speed-result">0</span> m/s</h3>
-
-    <!-- Acceleration Calculator -->
-    <h3>Calculate Acceleration (a = (v - u) / t)</h3>
-    <form id="acceleration-form">
-      <label for="initial-speed">Initial Speed (u):</label>
-      <input type="number" id="initial-speed" name="initial-speed">
-      <br>
-      <label for="final-speed">Final Speed (v):</label>
-      <input type="number" id="final-speed" name="final-speed">
-      <br>
-      <label for="acceleration-time">Time (s):</label>
-      <input type="number" id="acceleration-time" name="acceleration-time">
-      <br>
-      <button type="button" onclick="calculateAcceleration()">Calculate Acceleration (m/s²)</button>
-    </form>
-    <h3>Result: <span id="acceleration-result">0</span> m/s²</h3>
-
-    <!-- Force Calculator -->
-    <h3>Calculate Force (F = m × a)</h3>
-    <form id="force-form">
-      <label for="mass-force">Mass (kg):</label>
-      <input type="number" id="mass-force" name="mass-force">
-      <br>
-      <label for="acceleration-force">Acceleration (m/s²):</label>
-      <input type="number" id="acceleration-force" name="acceleration-force">
-      <br>
-      <button type="button" onclick="calculateForce()">Calculate Force (N)</button>
-    </form>
-    <h3>Result: <span id="force-result">0</span> N</h3>
-
-    <!-- Kinetic Energy Calculator -->
-    <h3>Calculate Kinetic Energy (E = ½ m v²)</h3>
-    <form id="kinetic-energy-form">
-      <label for="mass-ke">Mass (kg):</label>
-      <input type="number" id="mass-ke" name="mass-ke">
-      <br>
-      <label for="velocity-ke">Velocity (m/s):</label>
-      <input type="number" id="velocity-ke" name="velocity-ke">
-      <br>
-      <button type="button" onclick="calculateKineticEnergy()">Calculate Kinetic Energy (J)</button>
-    </form>
-    <h3>Result: <span id="kinetic-energy-result">0</span> J</h3>
-
-    <!-- Work Calculator -->
-    <h3>Calculate Work (W = F × d)</h3>
-    <form id="work-form">
-      <label for="force-work">Force (N):</label>
-      <input type="number" id="force-work" name="force-work">
-      <br>
-      <label for="distance-work">Distance (m):</label>
-      <input type="number" id="distance-work" name="distance-work">
-      <br>
-      <button type="button" onclick="calculateWork()">Calculate Work (J)</button>
-    </form>
-    <h3>Result: <span id="work-result">0</span> J</h3>
-
-    <!-- Pressure Calculator -->
-    <h3>Calculate Pressure (P = F / A)</h3>
-    <form id="pressure-form">
-      <label for="force-pressure">Force (N):</label>
-      <input type="number" id="force-pressure" name="force-pressure">
-      <br>
-      <label for="area-pressure">Area (m²):</label>
-      <input type="number" id="area-pressure" name="area-pressure">
-      <br>
-      <button type="button" onclick="calculatePressure()">Calculate Pressure (Pa)</button>
-    </form>
-    <h3>Result: <span id="pressure-result">0</span> Pa</h3>
-
-    <!-- Frequency Calculator -->
-    <h3>Calculate Frequency (f = v / λ)</h3>
-    <form id="frequency-form">
-      <label for="velocity-frequency">Velocity (m/s):</label>
-      <input type="number" id="velocity-frequency" name="velocity-frequency">
-      <br>
-      <label for="wavelength-frequency">Wavelength (m):</label>
-      <input type="number" id="wavelength-frequency" name="wavelength-frequency">
-      <br>
-      <button type="button" onclick="calculateFrequency()">Calculate Frequency (Hz)</button>
-    </form>
-    <h3>Result: <span id="frequency-result">0</span> Hz</h3>
+      <div class="calculator">
+        <h3>Force Calculator</h3>
+        <label for="mass-force">Mass (kg):</label>
+        <input type="number" id="mass-force" placeholder="Mass (kg)">
+        <label for="acceleration-force">Acceleration (m/s²):</label>
+        <input type="number" id="acceleration-force" placeholder="Acceleration (m/s²)">
+        <button onclick="calculateForce()">Calculate Force</button>
+        <div class="result">Force: <span id="force-result">0</span> N</div>
+      </div>
+      
+      <!-- More calculators can be added for other formulas -->
+    </div>
   </div>
 
   <script>
-    // Speed Calculation
+    // Speed Calculator
     function calculateSpeed() {
-      var distance = parseFloat(document.getElementById('distance').value);
-      var time = parseFloat(document.getElementById('time').value);
-      if (!isNaN(distance) && !isNaN(time) && time !== 0) {
-        var speed = distance / time;
-        document.getElementById('speed-result').innerText = speed.toFixed(2);
-      } else {
-        document.getElementById('speed-result').innerText = "Invalid input!";
-      }
+      var distance = document.getElementById('distance').value;
+      var time = document.getElementById('time').value;
+      var speed = distance / time;
+      document.getElementById('speed-result').innerText = speed;
     }
 
-    // Acceleration Calculation
+    // Acceleration Calculator
     function calculateAcceleration() {
-      var initialSpeed = parseFloat(document.getElementById('initial-speed').value);
-      var finalSpeed = parseFloat(document.getElementById('final-speed').value);
-      var time = parseFloat(document.getElementById('acceleration-time').value);
-      if (!isNaN(initialSpeed) && !isNaN(finalSpeed) && !isNaN(time) && time !== 0) {
-        var acceleration = (finalSpeed - initialSpeed) / time;
-        document.getElementById('acceleration-result').innerText = acceleration.toFixed(2);
-      } else {
-        document.getElementById('acceleration-result').innerText = "Invalid input!";
-      }
+      var initialSpeed = document.getElementById('initial-speed').value;
+      var finalSpeed = document.getElementById('final-speed').value;
+      var time = document.getElementById('acceleration-time').value;
+      var acceleration = (finalSpeed - initialSpeed) / time;
+      document.getElementById('acceleration-result').innerText = acceleration;
     }
 
-    // Force Calculation
+    // Force Calculator
     function calculateForce() {
-      var mass = parseFloat(document.getElementById('mass-force').value);
-      var acceleration = parseFloat(document.getElementById('acceleration-force').value);
-      if (!isNaN(mass) && !isNaN(acceleration)) {
-        var force = mass * acceleration;
-        document.getElementById('force-result').innerText = force.toFixed(2);
-      } else {
-        document.getElementById('force-result').innerText = "Invalid input!";
-      }
-    }
-
-    // Kinetic Energy Calculation
-    function calculateKineticEnergy() {
-      var mass = parseFloat(document.getElementById('mass-ke').value);
-      var velocity = parseFloat(document.getElementById('velocity-ke').value);
-      if (!isNaN(mass) && !isNaN(velocity)) {
-        var kineticEnergy = 0.5 * mass * velocity * velocity;
-        document.getElementById('kinetic-energy-result').innerText = kineticEnergy.toFixed(2);
-      } else {
-        document.getElementById('kinetic-energy-result').innerText = "Invalid input!";
-      }
-    }
-
-    // Work Calculation
-    function calculateWork() {
-      var force = parseFloat(document.getElementById('force-work').value);
-      var distance = parseFloat(document.getElementById('distance-work').value);
-      if (!isNaN(force) && !isNaN(distance)) {
-        var work = force * distance;
-        document.getElementById('work-result').innerText = work.toFixed(2);
-      } else {
-        document.getElementById('work-result').innerText = "Invalid input!";
-      }
-    }
-
-    // Pressure Calculation
-    function calculatePressure() {
-      var force = parseFloat(document.getElementById('force-pressure').value);
-      var area = parseFloat(document.getElementById('area-pressure').value);
-      if (!isNaN(force) && !isNaN(area) && area !== 0) {
-        var pressure = force / area;
-        document.getElementById('pressure-result').innerText = pressure.toFixed(2);
-      } else {
-        document.getElementById('pressure-result').innerText = "Invalid input!";
-      }
-    }
-
-    // Frequency Calculation
-    function calculateFrequency() {
-      var velocity = parseFloat(document.getElementById('velocity-frequency').value);
-      var wavelength = parseFloat(document.getElementById('wavelength-frequency').value);
-      if (!isNaN(velocity) && !isNaN(wavelength) && wavelength !== 0) {
-        var frequency = velocity / wavelength;
-        document.getElementById('frequency-result').innerText = frequency.toFixed(2);
-      } else {
-        document.getElementById('frequency-result').innerText = "Invalid input!";
-      }
+      var mass = document.getElementById('mass-force').value;
+      var acceleration = document.getElementById('acceleration-force').value;
+      var force = mass * acceleration;
+      document.getElementById('force-result').innerText = force;
     }
   </script>
-
 </body>
 </html>
