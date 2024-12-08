@@ -92,89 +92,449 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Symbol</th>
-          <th>Unit</th>
-          <th>Formula</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Speed</td>
-          <td>S</td>
-          <td>m/s</td>
-          <td>S = d / t</td>
-        </tr>
-        <tr>
-          <td>Acceleration</td>
-          <td>a</td>
-          <td>m/s²</td>
-          <td>a = (v - u) / t</td>
-        </tr>
-        <tr>
-          <td>Density</td>
-          <td>ρ</td>
-          <td>kg/m³</td>
-          <td>ρ = m / V</td>
-        </tr>
-        <tr>
-          <td>Power</td>
-          <td>P</td>
-          <td>W</td>
-          <td>P = W / t</td>
-        </tr>
-        <tr>
-          <td>Newton's Second Law</td>
-          <td>F</td>
-          <td>N</td>
-          <td>F = m × a</td>
-        </tr>
-        <tr>
-          <td>Weight</td>
-          <td>W</td>
-          <td>N</td>
-          <td>W = m × g</td>
-        </tr>
-        <tr>
-          <td>Pressure</td>
-          <td>P</td>
-          <td>Pa</td>
-          <td>P = F / A</td>
-        </tr>
-        <tr>
-          <td>Ohm’s Law</td>
-          <td>V</td>
-          <td>V</td>
-          <td>V = I × R</td>
-        </tr>
-        <tr>
-          <td>Kinetic Energy</td>
-          <td>KE</td>
-          <td>J</td>
-          <td>KE = 1/2 m × v²</td>
-        </tr>
-        <tr>
-          <td>Frequency</td>
-          <td>f</td>
-          <td>Hz</td>
-          <td>f = v / λ</td>
-        </tr>
-        <tr>
-          <td>Pendulum Period</td>
-          <td>T</td>
-          <td>s</td>
-          <td>T = 2π√(L / g)</td>
-        </tr>
-        <tr>
-          <td>Fahrenheit</td>
-          <td>F</td>
-          <td>°F</td>
-          <td>F = (9/5 × °C) + 32</td>
-        </tr>
-        <!-- Add more formulas here as needed -->
-      </tbody>
+                         <th>Name</th>
+                <th>Symbol</th>
+                <th>Unit</th>
+                <th>Formula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Average Speed</td>
+                <td>S</td>
+                <td>m/s</td>
+                <td>S = d / t</td>
+            </tr>
+            <tr>
+                <td>Acceleration</td>
+                <td>a</td>
+                <td>m/s²</td>
+                <td>a = (v - u) / t</td>
+            </tr>
+            <tr>
+                <td>Density</td>
+                <td>ρ</td>
+                <td>kg/m³</td>
+                <td>ρ = m / V</td>
+            </tr>
+            <tr>
+                <td>Power</td>
+                <td>P</td>
+                <td>W</td>
+                <td>P = W / t</td>
+            </tr>
+            <tr>
+                <td>Newton’s Second Law</td>
+                <td>F</td>
+                <td>N</td>
+                <td>F = m × a</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>W</td>
+                <td>kg·m/s² (N)</td>
+                <td>W = m × g</td>
+            </tr>
+            <tr>
+                <td>Pressure</td>
+                <td>P</td>
+                <td>Pa</td>
+                <td>P = F / A</td>
+            </tr>
+            <tr>
+                <td>Ohm’s Law</td>
+                <td>V</td>
+                <td>V</td>
+                <td>V = I × R</td>
+            </tr>
+            <tr>
+                <td>Kinetic Energy</td>
+                <td>K.E.</td>
+                <td>J</td>
+                <td>K.E. = ½ mv²</td>
+            </tr>
+            <tr>
+                <td>Frequency</td>
+                <td>F</td>
+                <td>Hz</td>
+                <td>F = v / λ</td>
+            </tr>
+            <tr>
+                <td>Pendulum</td>
+                <td>T</td>
+                <td>s</td>
+                <td>T = 2π√(L / g)</td>
+            </tr>
+            <tr>
+                <td>Fahrenheit</td>
+                <td>F</td>
+                <td>°F</td>
+                <td>F = (9/5 × °C) + 32</td>
+            </tr>
+            <tr>
+                <td>Work</td>
+                <td>W</td>
+                <td>J</td>
+                <td>W = F × d × cos(θ)</td>
+            </tr>
+            <tr>
+                <td>Torque</td>
+                <td>T</td>
+                <td>Nm</td>
+                <td>T = F × r × sin(θ)</td>
+            </tr>
+            <tr>
+                <td>Displacement</td>
+                <td>Δx</td>
+                <td>m</td>
+                <td>Δx = Xf – Xi</td>
+            </tr>
+            <tr>
+                <td>Mass</td>
+                <td>m</td>
+                <td>kg</td>
+                <td>F = m × a or m = F / a</td>
+            </tr>
+            <tr>
+                <td>Amplitude</td>
+                <td>x</td>
+                <td>m</td>
+                <td>x = A sin(ωt + ϕ)</td>
+            </tr>
+            <tr>
+                <td>Tension</td>
+                <td>T</td>
+                <td>N</td>
+                <td>T = mg + ma</td>
+            </tr>
+            <tr>
+                <td>Surface Charge Density</td>
+                <td>σ</td>
+                <td>C/m²</td>
+                <td>σ = q / A</td>
+            </tr>
+            <tr>
+                <td>Linear Speed</td>
+                <td>V</td>
+                <td>m/s</td>
+                <td>V = ΔS / ΔT</td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td>Δx</td>
+                <td>m</td>
+                <td>Δx = x2 − x1</td>
+            </tr>
+            <tr>
+                <td>Heat of Fusion</td>
+                <td>q</td>
+                <td>J</td>
+                <td>q = m × ΔHf</td>
+            </tr>
+            <tr>
+                <td>Gravity</td>
+                <td>F</td>
+                <td>N</td>
+                <td>F = G * (m₁ * m₂) / r²</td>
+            </tr>
+            <tr>
+                <td>Spring Potential Energy</td>
+                <td>P.E.</td>
+                <td>J</td>
+                <td>P.E. = 1/2 * k * x²</td>
+            </tr>
+            <tr>
+                <td>Physics Kinematics</td>
+                <td>v²</td>
+                <td>m/s</td>
+                <td>v² = v₀² + 2a(x - x₀)</td>
+            </tr>
+            <tr>
+                <td>DC Voltage Drop</td>
+                <td>V</td>
+                <td>V</td>
+                <td>V = I × R</td>
+            </tr>
+            <tr>
+                <td>Hubble’s Law</td>
+                <td>v</td>
+                <td>m/s</td>
+                <td>v = H₀ r</td>
+            </tr>
+            <tr>
+                <td>Induced Voltage</td>
+                <td>e</td>
+                <td>V</td>
+                <td>e = – N(dΦB/dt)</td>
+            </tr>
+            <tr>
+                <td>Latent Heat</td>
+                <td>L</td>
+                <td>J/kg</td>
+                <td>L = Q / M</td>
+            </tr>
+            <tr>
+                <td>Wavelength</td>
+                <td>λ</td>
+                <td>m</td>
+                <td>λ = v / f</td>
+            </tr>
+            <tr>
+                <td>Gravitational Force</td>
+                <td>F</td>
+                <td>N</td>
+                <td>F = G(m₁m₂) / r²</td>
+            </tr>
+            <tr>
+                <td>Potential Energy</td>
+                <td>PE</td>
+                <td>J</td>
+                <td>PE = mgh</td>
+            </tr>
+            <tr>
+                <td>Strain Energy</td>
+                <td>U</td>
+                <td>J</td>
+                <td>U = Fδ / 2</td>
+            </tr>
+            <tr>
+                <td>Friction Force</td>
+                <td>f</td>
+                <td>N</td>
+                <td>f = μN</td>
+            </tr>
+            <tr>
+                <td>Cell Potential</td>
+                <td>E₀cell</td>
+                <td>V</td>
+                <td>E₀cell = E₀red − E₀oxid</td>
+            </tr>
+            <tr>
+                <td>Shear Modulus</td>
+                <td>G</td>
+                <td>Pa</td>
+                <td>(shear stress)/(shear strain) = (F / A) / (x / y)</td>
+                          <tr>
+                <td>Water Pressure</td>
+                <td>p</td>
+                <td>Pa</td>
+                <td>p = ρgh</td>
+            </tr>
+            <tr>
+                <td>Refractive Index</td>
+                <td>n</td>
+                <td>dimensionless</td>
+                <td>n = c / v</td>
+            </tr>
+            <tr>
+                <td>Centroid</td>
+                <td>C</td>
+                <td>m</td>
+                <td>C = [(x₁ + x₂ + x₃) / 3, (y₁ + y₂ + y₃) / 3]</td>
+            </tr>
+            <tr>
+  <td>Final Velocity</td>
+  <td>v⃗ f = v⃗ i + a⃗ Δt</td>
+  <td>m/s</td>
+  <td>v⃗ f = v⃗ i + a⃗ Δt</td>
+</tr>
+<tr>
+  <td>Kinematics (Final Velocity Squared)</td>
+  <td>v⃗ f² = v⃗ i² + 2a⃗ ⋅ Δx⃗</td>
+  <td>m²/s²</td>
+  <td>v⃗ f² = v⃗ i² + 2a⃗ ⋅ Δx⃗</td>
+</tr>
+<tr>
+  <td>Kinematics (Displacement)</td>
+  <td>Δx⃗ = v⃗ iΔt + ½a⃗ (Δt)²</td>
+  <td>m</td>
+  <td>Δx⃗ = v⃗ iΔt + ½a⃗ (Δt)²</td>
+</tr>
+<tr>
+  <td>Kinetic Friction Force</td>
+  <td>fₖ = μₖN</td>
+  <td>N</td>
+  <td>fₖ = μₖN</td>
+</tr>
+<tr>
+  <td>Maximum Static Friction Force</td>
+  <td>fₛ(max) = μₛN</td>
+  <td>N</td>
+  <td>fₛ(max) = μₛN</td>
+</tr>
+<tr>
+  <td>Mechanical Energy</td>
+  <td>Emech = Ek + Ep</td>
+  <td>J</td>
+  <td>Emech = Ek + Ep</td>
+</tr>
+<tr>
+  <td>Photon Energy</td>
+  <td>E = hf</td>
+  <td>J</td>
+  <td>E = hf</td>
+</tr>
+<tr>
+  <td>Electromagnetic Flux</td>
+  <td>ϕ = BAcosθ</td>
+  <td>Wb</td>
+  <td>ϕ = BAcosθ</td>
+</tr>
+<tr>
+  <td>Electrostatic Force</td>
+  <td>F = k(Q₁Q₂/r²)</td>
+  <td>N</td>
+  <td>F = k(Q₁Q₂/r²)</td>
+</tr>
+<tr>
+  <td>AC RMS Current</td>
+  <td>I(rms) = I(max) / √2</td>
+  <td>A</td>
+  <td>I(rms) = I(max) / √2</td>
+</tr>
+<tr>
+  <td>AC RMS Voltage</td>
+  <td>V(rms) = V(max) / √2</td>
+  <td>V</td>
+  <td>V(rms) = V(max) / √2</td>
+</tr>
+
+
+            <!-- Constants -->
+            <tr>
+                <td>Planck Constant</td>
+                <td>h</td>
+                <td>J·s</td>
+                <td>h = 6.63 × 10⁻³⁴ J·s</td>
+            </tr>
+            <tr>
+                <td>Gravitation Constant</td>
+                <td>G</td>
+                <td>m³ kg⁻¹ s⁻²</td>
+                <td>G = 6.67 × 10⁻¹¹ m³ kg⁻¹ s⁻²</td>
+            </tr>
+            <tr>
+                <td>Boltzmann Constant</td>
+                <td>k</td>
+                <td>J/K</td>
+                <td>k = 1.38 × 10⁻²³ J/K</td>
+            </tr>
+            <tr>
+                <td>Molar Gas Constant</td>
+                <td>R</td>
+                <td>J/(mol·K)</td>
+                <td>R = 8.314 J/(mol·K)</td>
+            </tr>
+            <tr>
+                <td>Avogadro’s Number</td>
+                <td>NA</td>
+                <td>mol⁻¹</td>
+                <td>NA = 6.023 × 10²³ mol⁻¹</td>
+            </tr>
+            <tr>
+                <td>Charge of Electron</td>
+                <td>e</td>
+                <td>C</td>
+                <td>e = 1.602 × 10⁻¹⁹ C</td>
+            </tr>
+            <tr>
+                <td>Permittivity of Vacuum</td>
+                <td>ε₀</td>
+                <td>F/m</td>
+                <td>ε₀ = 8.85 × 10⁻¹² F/m</td>
+            </tr>
+            <tr>
+                <td>Coulomb Constant</td>
+                <td>1 / (4πε₀)</td>
+                <td>N·m²/C²</td>
+                <td>1 / (4πε₀) = 8.9875517923 × 10⁹ N·m²/C²</td>
+            </tr>
+            <tr>
+                <td>Faraday Constant</td>
+                <td>F</td>
+                <td>C/mol</td>
+                <td>F = 96485 C/mol</td>
+            </tr>
+            <tr>
+                <td>Mass of Electron</td>
+                <td>me</td>
+                <td>kg</td>
+                <td>me = 9.1 × 10⁻³¹ kg</td>
+            </tr>
+            <tr>
+                <td>Mass of Proton</td>
+                <td>mp</td>
+                <td>kg</td>
+                <td>mp = 1.6726 × 10⁻²⁷ kg</td>
+            </tr>
+            <tr>
+                <td>Mass of Neutron</td>
+                <td>mn</td>
+                <td>kg</td>
+                <td>mn = 1.6749 × 10⁻²⁷ kg</td>
+            </tr>
+            <tr>
+                <td>Stefan-Boltzmann Constant</td>
+                <td>σ</td>
+                <td>W/(m²·K⁴)</td>
+                <td>σ = 5.67 × 10⁻⁸ W/(m²·K⁴)</td>
+            </tr>
+            <tr>
+                <td>Rydberg Constant</td>
+                <td>R∞</td>
+                <td>1/m</td>
+                <td>R∞ = 1.097 × 10⁷ 1/m</td>
+            </tr>
+            <tr>
+                <td>Bohr Magneton</td>
+                <td>µB</td>
+                <td>J/T</td>
+                <td>µB = 9.27 × 10⁻²⁴ J/T</td>
+            </tr>
+            <tr>
+                <td>Bohr Radius</td>
+                <td>a₀</td>
+                <td>m</td>
+                <td>a₀ = 0.529 × 10⁻¹⁰ m</td>
+            </tr>
+            <tr>
+                <td>Standard Atmosphere</td>
+                <td>atm</td>
+                <td>Pa</td>
+                <td>atm = 1.01325 × 10⁵ Pa</td>
+            </tr>
+            <tr>
+                <td>Wien Displacement Constant</td>
+                <td>b</td>
+                <td>m·K</td>
+                <td>b = 2.9 × 10⁻³ m·K</td>
+            </tr>
+        </tbody>
     </table>
-  </div>
+
+    <script>
+        function searchTable() {
+            const input = document.getElementById("search");
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById("formulaTable");
+            const tr = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < tr.length; i++) {
+                const td = tr[i].getElementsByTagName("td");
+                let match = false;
+
+                for (let j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            match = true;
+                            break;
+                        }
+                    }
+                }
+
+                tr[i].style.display = match ? "" : "none";
+            }
+        }
 
   <div class="container">
     <h2>Calculator</h2>
